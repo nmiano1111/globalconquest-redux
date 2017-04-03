@@ -1,11 +1,43 @@
 /*
  - Main style sheet for game and lobby, etc.
 */
+
+@media screen and (min-width: 1000px) {
+  .ranking {
+    margin-bottom: 25px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+    /*
+    body {
+        background-color: lightgreen;
+    }
+    */
+
+    .event-panel {
+      margin-top: 15px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .ranking {
+        border:1px solid #d2d2d2;
+        border-radius:5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+}
+
 .card {
     border:4px solid #000000;
     border-radius:5px;
     margin-top: 25px;
     margin-right: 15px;
+    margin-left: 15px;
     text-align: center;
 }
 
@@ -22,6 +54,59 @@
   margin-right: 15px;
 }
 
+.chat {
+  height: 200px;
+  overflow: scroll;
+}
+
+.ranking {
+    border:1px solid #d2d2d2;
+    border-radius:5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.rank-pic {
+  margin-left: 1px;
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+.ranking-text {
+    margin-top: -1px;
+}
+
 #cards {
   margin-left: 25px;
+}
+
+#events {
+  height: 185px;
+  overflow: scroll;
+}
+
+#map {
+  overflow: scroll;
+  border:1px solid #d2d2d2;
+  border-radius:5px;
+  margin-top: 25px;
+  height: 490px;
+}
+
+#map-pic {
+  position: relative;
+}
+
+#ranks {
+  margin: auto;
+}
+
+#chat-send {
+  margin-left: 3px;
+}
+
+#chat-body {
+  width: 200px;
 }
