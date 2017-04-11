@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta content="width=device-width, initial-scale=1" name="viewport">
+  	<title>Global Conquest</title><!-- Latest compiled and minified CSS -->
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!-- Optional theme -->
+  	<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+  	<!-- jQuery -->
+
+  	<script src="https://code.jquery.com/jquery-3.2.1.js">
+  	</script><!-- Latest compiled and minified JavaScript -->
+
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  	</script>
+  	<link href="style/main.css" rel="stylesheet">
+  </head>
+  <body>
+  	<div class="container">
+  		<div class="page-header">
+  			<h3>Global Conquest</h3>
+  		</div>
+  		<div class="row">
+        <div class="alert alert-info">
+        <!--news here -->
+            <h4>Recent Changes (10/07/2017):</h4>
+            <ul>
+              <li>Example updates</li>
+            </ul>
+            <h4>Known Issues</h4>
+            <ul>
+              <li>Still no territory bonus for turns ins...I keep forgetting..</li>
+            </ul>
+            <h4>Coming "Soon"</h4>
+            <ul>
+              <li>In-game message board</li>
+              <li>Game history tracker</li>
+            </ul>
+        </div>
+        <h2>Create a New Game</h2>
+
+       <form class="form-horizontal" id="new_game" action="{{ URL::base(); }}/new_game" method="post" onsubmit="return checkForm(this); ">
+        <div class="form-group">
+          <label class="col-lg-2 control-label" for="title">Game Title</label>
+          <div id="error" class="col-lg-10">
+            <input class="form-control" name="title" placeholder="Game Title" type="text">
+            <span id="error_text" class="help-inline"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="players" class="col-lg-2 control-label">Players</label>
+          <div class="col-lg-10">
+            <select class="form-control" name="num_plyrs">
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2 control-label" for="title">Type</label>
+          <div class="col-lg-offset-2 col-lg-10">
+             <select class="form-control" name="type">
+              <option>Public</option>
+              <option>Private</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-offset-2 col-lg-10">
+            <button type="submit" class="btn btn-default">Make Game</button>
+            <input name="maker_id" type="hidden" value="{{ $_SESSION['user']['id'] }}">
+            <span id="game_made" class="help-inline"></span>
+          </div>
+        </div>
+      </form>
+
+        <h2>Games</h2>
+
+        <table class="table table-bordered table-hover">
+          <tr>
+            <th>Game</th>
+            <th>Player Count</th>
+            <th>Active</th>
+            <th>Player Up</th>
+          </tr>
+          <tr>
+            <td><a href="index.html">Game 1</a></td>
+            <td><p>4/6</p></td>
+            <td><p>No</p></td>
+            <td><p>You</p></td>
+          </tr>
+        </table>
+      </div>
+  	</div>
+  </body>
+</html>
