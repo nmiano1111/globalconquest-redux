@@ -1,0 +1,169 @@
+<div class="row">
+  <link href="<%= static_path(@conn, "/css/territory_positions.css") %>" rel="stylesheet">
+	<div class="col-md-8">
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="active"><a data-toggle="tab" href="#tab1" role="tab">Map</a></li>
+			<li><a data-toggle="tab" href="#tab2" role="tab">Cards</a></li>
+			<li><a data-toggle="tab" href="#tab3" role="tab">Stats</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">
+				<div id="map">
+          <div id="inner-map">
+            <img id="map-pic" alt="Map" class="img-rounded" src="<%= static_path(@conn, "/images/map-cropped.png") %>">
+            <div class="north_america circle" id="terr0" style="background-color:#000000;" name="alaska">10</div>
+            <div class="north_america circle" id="terr1" style="background-color:#000000;" name="alberta">2</div>
+            <div class="north_america circle" id="terr2" style="background-color:#000000;" name="central_america">11</div>
+            <div class="north_america circle" id="terr3" style="background-color:#000000;" name="eastern_us">3</div>
+            <div class="north_america circle" id="terr4" style="background-color:#000000;" name="western_us">6</div>
+            <div class="north_america circle" id="terr5" style="background-color:#FFA500;" name="greenland">19</div>
+            <div class="north_america circle" id="terr6" style="background-color:#000000;" name="nw_territory">1</div>
+            <div class="north_america circle" id="terr7" style="background-color:#000000;" name="ontario">1</div>
+            <div class="north_america circle" id="terr8" style="background-color:#000000;" name="quebec">1</div>
+            <div class="south_america circle" id="terr9" style="background-color:#FF0000;" name="argentina">1</div>
+            <div class="south_america circle" id="terr10" style="background-color:#FF0000;" name="brazil">14</div>
+            <div class="south_america circle" id="terr11" style="background-color:#FF0000;" name="peru">1</div>
+            <div class="south_america circle" id="terr12" style="background-color:#FF0000;" name="venezuela">22</div>
+            <div class="europe circle" id="terr13" style="background-color:#000000;" name="great_britain">1</div>
+            <div class="europe circle" id="terr14" style="background-color:#FFA500;" name="iceland">1</div>
+            <div class="europe circle" id="terr15" style="background-color:#FFA500;" name="northern_eur">4</div>
+            <div class="europe circle" id="terr16" style="background-color:#FFA500;" name="scandinavia">3</div>
+            <div class="europe circle" id="terr17" style="background-color:#CCCC00;" name="southern_eur">6</div>
+            <div class="europe circle" id="terr18" style="background-color:#FFA500;" name="ukraine">9</div>
+            <div class="europe circle" id="terr19" style="background-color:#CCCC00;" name="western_europe">11</div>
+            <div class="africa circle" id="terr20" style="background-color:#0000FF;" name="congo">1</div>
+            <div class="africa circle" id="terr21" style="background-color:#0000FF;" name="east_africa">4</div>
+            <div class="africa circle" id="terr22" style="background-color:#0000FF;" name="egypt">5</div>
+            <div class="africa circle" id="terr23" style="background-color:#0000FF;" name="madagascar">1</div>
+            <div class="africa circle" id="terr24" style="background-color:#FF0000;" name="north_africa">1</div>
+            <div class="africa circle" id="terr25" style="background-color:#0000FF;" name="south_africa">1</div>
+            <div class="asia circle" id="terr26" style="background-color:#CCCC00;" name="afghanistan">1</div>
+            <div class="asia circle" id="terr27" style="background-color:#CCCC00;" name="china">5</div>
+            <div class="asia circle" id="terr28" style="background-color:#CCCC00;" name="india">12</div>
+            <div class="asia circle" id="terr29" style="background-color:#CCCC00;" name="irkutsk">1</div>
+            <div class="asia circle" id="terr30" style="background-color:#CCCC00;" name="japan">1</div>
+            <div class="asia circle" id="terr31" style="background-color:#FFA500;" name="kamchatka">2</div>
+            <div class="asia circle" id="terr32" style="background-color:#000000;" name="middle_east">2</div>
+            <div class="asia circle" id="terr33" style="background-color:#228B22;" name="siam">25</div>
+            <div class="asia circle" id="terr34" style="background-color:#FFA500;" name="siberia">2</div>
+            <div class="asia circle" id="terr35" style="background-color:#FFA500;" name="ural">4</div>
+            <div class="asia circle" id="terr36" style="background-color:#FFA500;" name="yakutsk">5</div>
+            <div class="asia circle" id="terr37" style="background-color:#000000;" name="mongolia">1</div>
+            <div class="australia circle" id="terr38" style="background-color:#228B22;" name="east_australia">1</div>
+            <div class="australia circle" id="terr39" style="background-color:#228B22;" name="indonesia">1</div>
+            <div class="australia circle" id="terr40" style="background-color:#228B22;" name="new_guinea">1</div>
+            <div class="australia circle" id="terr41" style="background-color:#228B22;" name="west_australia">1</div>
+          </div>
+        </div>
+			</div>
+			<div class="tab-pane" id="tab2">
+				<div id="cards">
+					<form action="" id="cards_check" method="post" name="cards_check">
+						<div class="row" id="card_list">
+							<div class="card col-lg-2">
+								<img alt="Infantry" class="img-rounded card-image" height="75" src="<%= static_path(@conn, "/images/infantry.png") %>" width="75"><br>
+								<br>
+								<h4 class="card-text">China</h4><input name="china" type="checkbox" value="infantry">
+							</div>
+							<div class="card col-lg-2">
+								<img alt="Cavalry" class="img-rounded card-image" height="75" src="<%= static_path(@conn, "/images/cavalry.png") %>" width="75"><br>
+								<br>
+								<h4 class="card-text">Venezuela</h4><input name="venezuela" type="checkbox" value="cavalry">
+							</div>
+							<div class="card col-lg-2">
+								<img alt="Cannon" class="img-rounded card-image" height="75" src="<%= static_path(@conn, "/images/cannon.png") %>" width="75"><br>
+								<br>
+								<h4 class="card-text">Peru</h4><input name="peru" type="checkbox" value="cannon">
+							</div>
+						</div>
+						<div class="row">
+							<hr class="card-division">
+							<button class="btn btn-primary card-submit" type="submit">Turn In</button>
+							<h5>Turn In Count: 2</h5>
+							<h5>Bonus: 8 armies</h5>
+              <hr class="card-division">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="tab-pane" id="tab3">
+				<h3>Stats</h3>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="row">
+			<div class="event-panel panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Event Log</h3>
+				</div>
+				<div id="events" class="panel-body">
+					<p><font color="#FF0000" size="1">[04-01-17 12:35PM] - [Mike] ended his turn</font></p>
+					<p><font color="#FF0000" size="1">[04-01-17 12:35PM] - [Mike] moved 22 armies from [Peru] to [Venezuela]</font></p>
+					<p><font color="#FF0000" size="1">[04-01-17 12:34PM] - [Mike] attacked [Venezuela] from [6 6 5]. [Will] rolled [2 2]</font></p>
+					<p><font color="#FF0000" size="1">[04-01-17 12:34PM] - [Mike] rolled [4 3 2]. [Will] rolled [4 1]</font></p>
+					<p><font color="#FF0000" size="1">[04-01-17 12:33PM] - [Mike] rolled [5 5 2]. [Will] rolled [1 1]</font></p>
+					<p><font color="#FF0000" size="1">[04-01-17 12:32PM] - [Mike] began an attack of [Venezuela] from [Peru]</font></p>
+					<p><font color="#FF0000" size="1">[04-01-17 12:32PM] - [Mike] placed 8 armies in [Peru]</font></p>
+					<p><font color="#000000" size="1">[04-01-17 09:15AM] - [Will] ended his turn</font></p>
+					<p><font color="#000000" size="1">[04-01-17 09:14AM] - [Will] moved 5 armies from [Central America] to [Venezuela]</font></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="event-panel panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Chat</h3>
+				</div>
+				<div class="panel-body">
+					<div class="chat">
+						<p><font color="#FF0000" size="1">[04-01-17 12:35PM] - [Mike] - Oh man, I just fucked you up @Will!</font></p>
+						<p><font color="#000000" size="1">[04-01-17 02:15PM] - [Will] - ...uhhhhhh</font></p>
+						<p><font color="#FF0000" size="1">[04-01-17 04:11PM] - [Mike] - &gt;:-]</font></p>
+						<p><font color="#228B22" size="1">[04-01-17 08:55PM] - [Phil] - Holy shit</font></p>
+						<p><font color="#228B22" size="1">[04-01-17 08:55PM] - [Phil] - :-O</font></p>
+						<p><font color="#0000FF" size="1">[04-01-17 09:01PM] - [Nick] - @Will that's what you get</font></p>
+						<p><font color="#0000FF" size="1">[04-01-17 09:01PM] - [Nick] - :D</font></p>
+					</div>
+					<div class="form-inline">
+						<div class="input-group">
+							<input id="chat-body" class="form-control" placeholder="Type message here ..." type="text">
+						</div><button id="chat-send" class="btn btn-primary" type="button">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="ranks" class="foot">
+  <div class="ranking col-md-2" style="border:1px solid #0000FF">
+    <img alt="Infantry" class="img-rounded rank-pic" src="<%= static_path(@conn, "/images/nick-prof.jpg") %>"><br>
+    <p class="ranking-text">Nick</p>
+    <p class="ranking-text">Territories: 8</p>
+  </div>
+  <div class="ranking col-md-2" style="border:1px solid #FFA500">
+    <img alt="Cavalry" class="img-rounded rank-pic" src="<%= static_path(@conn, "/images/noah-prof.jpg") %>"><br>
+    <p class="ranking-text">Noah</p>
+    <p class="ranking-text">Territories: 8</p>
+  </div>
+  <div class="ranking col-md-2" style="border:1px solid #000000">
+    <img alt="Cannon" class="img-rounded rank-pic" src="<%= static_path(@conn, "/images/will-prof.jpg") %>"><br>
+    <p class="ranking-text">Will</p>
+    <p class="ranking-text">Territories: 8</p>
+  </div>
+  <div class="ranking col-md-2" style="border:1px solid #CCCC00">
+    <img alt="Infantry" class="img-rounded rank-pic" src="<%= static_path(@conn, "/images/greg-prof.jpg") %>"><br>
+    <p class="ranking-text">Greg</p>
+    <p class="ranking-text">Territories: 8</p>
+  </div>
+  <div class="ranking col-md-2" style="border:1px solid #FF0000">
+    <img alt="Cavalry" class="img-rounded card-image rank-pic" src="<%= static_path(@conn, "/images/mike-prof.jpg") %>"><br>
+    <p class="ranking-text">Mike</p>
+    <p class="ranking-text">Territories: 8</p>
+  </div>
+  <div class="ranking col-md-2" style="border:1px solid #228B22">
+    <img alt="Cannon" class="img-rounded rank-pic" src="<%= static_path(@conn, "/images/phil-prof.jpg") %>"><br>
+    <p class="ranking-text">Phil</p>
+    <p class="ranking-text">Territories: 8</p>
+  </div>
+</div>
