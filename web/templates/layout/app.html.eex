@@ -35,6 +35,7 @@
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
             <li><a href="/users/new">Register</a></li>
+            <li><%= link "Log In", to: session_path(@conn, :new) %></li>
           </ul>
         </nav>
         <span class="logo"></span>

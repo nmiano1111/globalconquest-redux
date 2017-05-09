@@ -21,6 +21,8 @@ defmodule Globalconq.Router do
     get "/game", GameController, :index
     
     resources "/users", UserController, only: [:show, :new, :create]
+    
+    resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
   # Other scopes may use custom stacks.
