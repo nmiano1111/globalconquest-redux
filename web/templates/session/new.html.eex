@@ -4,7 +4,7 @@
       <h2 class="form-signin-heading">Please login</h2>
       <%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
         <%= text_input f, :email, placeholder: "Email Address", class: "form-control" %>
-        <%= text_input f, :password, placeholder: "Password", class: "form-control" %>
+        <%= password_input f, :password, placeholder: "Password", class: "form-control" %>
         <label class="checkbox">
           <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
         </label>

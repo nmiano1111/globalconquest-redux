@@ -1,6 +1,5 @@
 defmodule Globalconq.UserController do
   use Globalconq.Web, :controller
-
   alias Globalconq.User
 
   plug :scrub_params, "user" when action in [:create]
@@ -21,6 +20,7 @@ defmodule Globalconq.UserController do
     case Repo.insert(changeset) do
       {:ok, user} ->
         conn
+        |> Globalconq.Auth.login(user)
         |> put_flash(:info, "#{user.name} created!")
         |> redirect(to: user_path(conn, :show, user))
       {:error, changeset} ->

@@ -6,7 +6,6 @@ defmodule Globalconq.Repo.Migrations.CreateUser do
       add :email, :string, null: false
       add :name, :string
       add :password_hash, :string
-      add :salt, :string
       add :is_admin, :boolean, default: false, null: false
 
       timestamps()

@@ -6,7 +6,6 @@ defmodule Globalconq.User do
     field :name, :string
     field :password, :string, virtual: true
     field :password_hash, :string
-    field :salt, :string
     field :is_admin, :boolean, default: false
 
     timestamps()
