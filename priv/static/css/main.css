@@ -2,6 +2,11 @@
  - Main style sheet for game and lobby, etc.
 */
 
+@media screen and (min-width: 500px) {
+  #options {
+    padding-top:25px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .ranking {
     margin-bottom: 25px;
@@ -16,6 +21,10 @@
     }
     */
 
+    .page-header {
+      padding-bottom: 35px;
+    }
+
     .event-panel {
       margin-top: 15px;
       margin-left: 15px;
@@ -29,7 +38,6 @@
         margin-bottom: 5px;
         text-align: left;
     }
-
 }
 
 .card {
@@ -142,6 +150,10 @@
 	/* width and height can be anything, as long as they're equal */
 }
 
+.pusher {
+  padding-top: 8.5px;
+}
+
 #cards {
   margin-left: 25px;
 }
@@ -180,4 +192,8 @@
 
 #chat-body {
   width: 200px;
+}
+
+#title {
+  display: inline-block;
 }

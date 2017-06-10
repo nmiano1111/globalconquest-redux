@@ -30,25 +30,23 @@
 
     -->
       <div class="page-header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
+        <navrole="navigation">
+          <h2 id="title">Global Conquest</h2>
+          <ul id="options" class="nav nav-pills pull-right">
+            <li><%= link "Home", to: lobby_path(@conn, :index) %></li>
             <%= if @current_user do %>
-              <li><%= @current_user.email  %> (<%= @current_user.id %>)</li>
-              <li>
-                <%= link "Sign Out", to: session_path(@conn, :delete, 
-                                                      @current_user),
-                                     method: "delete" %>
-              </li>  
+              <li><div class="pusher"><%= @current_user.email  %> (<%= @current_user.id %>)</div></li>
+              <li><div class="pusher"><%= link "Sign Out", to: session_path(@conn, :delete, @current_user), method: "delete" %></div></li>
             <% else %>
               <li><%= link "Register", to: user_path(@conn, :new) %></li>
               <li><%= link "Log In", to: session_path(@conn, :new) %></li>
-            <% end %>    
+            <% end %>
           </ul>
         </nav>
-        <span class="logo"></span>
+        <!--<span class="logo"></span>-->
         <!--<h3>Global Conquest</h3>-->
       </div>
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <!-- <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p> -->
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <main role="main">
         <%= render @view_module, @view_template, assigns %>

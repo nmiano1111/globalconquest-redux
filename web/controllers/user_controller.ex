@@ -22,7 +22,7 @@ defmodule Globalconq.UserController do
         conn
         |> Globalconq.Auth.login(user)
         |> put_flash(:info, "#{user.name} created!")
-        |> redirect(to: user_path(conn, :show, user))
+        |> redirect(to: lobby_path(conn, :index)) #user_path(conn, :show, user))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end  

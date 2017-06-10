@@ -135,7 +135,7 @@
 		</div>
 	</div>
 </div>
-<div id="ranks" class="foot">
+<div id="ranks" class="row foot">
   <div class="ranking col-md-2" style="border:1px solid #0000FF">
     <img alt="Infantry" class="img-rounded rank-pic" src="<%= static_path(@conn, "/images/nick-prof.jpg") %>"><br>
     <p class="ranking-text">Nick</p>
