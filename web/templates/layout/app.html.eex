@@ -33,7 +33,7 @@
         <navrole="navigation">
           <h2 id="title">Global Conquest</h2>
           <ul id="options" class="nav nav-pills pull-right">
-            <li><%= link "Home", to: lobby_path(@conn, :index) %></li>
+            <li><a href="/globalconq">Home</a><!-- TEMPORARY <%= link "Home", to: lobby_path(@conn, :index) %> --></li>
             <%= if @current_user do %>
               <li><div class="pusher"><%= @current_user.email  %> (<%= @current_user.id %>)</div></li>
               <li><div class="pusher"><%= link "Sign Out", to: session_path(@conn, :delete, @current_user), method: "delete" %></div></li>
