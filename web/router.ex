@@ -34,7 +34,8 @@ defmodule Globalconq.Router do
 
     scope "/" do
       pipe_through [:login_required]
-        get "/", LobbyController, :index
+        # temporary!
+        get "/globalconq", LobbyController, :index
         get "/game", GameController, :index
       
       scope "/admin", Admin, as: :admin do
